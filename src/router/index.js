@@ -14,11 +14,17 @@ const routes=[
         children:[
             {
                 path:'demo1',
-                component:()=>import('@/pages/Demo1.vue'),
+                component:()=>import('@/pages/demo1'),
+                children:[
+                    {
+                        path:'people',
+                        component:()=>import('@/pages/demo1/people')
+                    }
+                ]
             },
             {
                 path:'demo2',
-                component:()=>import('@/pages/Demo2.vue'),
+                component:()=>import('@/pages/Demo2'),
             }
         ]
     }
